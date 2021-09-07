@@ -28,7 +28,6 @@ public class Main extends Application {
         System.out.println(users);
     }
 
-
     public static void main(String[] args) {
         launch(args);
     }

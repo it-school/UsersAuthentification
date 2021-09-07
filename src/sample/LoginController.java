@@ -32,7 +32,7 @@ public class LoginController
 		Parent root = FXMLLoader.load(getClass().getResource("registerForm.fxml"));
 		Stage stage = new Stage();
 		stage.setTitle("User registration form");
-		stage.setScene(new Scene(root, 300, 275));
+		stage.setScene(new Scene(root));
 		stage.show();
 	}
 }

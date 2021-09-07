@@ -21,7 +21,9 @@ public class RegisterController {
     Button registerBtn;
 
     public void cancelClick(ActionEvent actionEvent) {
-        registerBtn.setTooltip(new Tooltip("Tooltip for Cancel registration button"));
+        Tooltip tt = new Tooltip("Tooltip for Cancel registration button");
+        tt.setStyle("-fx-font: normal bold 10 Langdon; -fx-base: #AE3522; -fx-text-fill: orange;");
+        registerBtn.setTooltip(tt);
     }
 
     public void registerClick(ActionEvent actionEvent) {

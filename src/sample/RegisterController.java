@@ -17,7 +17,11 @@ public class RegisterController {
     @FXML
     Button loginBtn;
 
+    @FXML
+    Button registerBtn;
+
     public void cancelClick(ActionEvent actionEvent) {
+        registerBtn.setTooltip(new Tooltip("Tooltip for Cancel registration button"));
     }
 
     public void registerClick(ActionEvent actionEvent) {
@@ -26,6 +30,6 @@ public class RegisterController {
 
         Main.users.add(new User(login, password));
 
-        loginBtn.setTooltip(new Tooltip("Tooltip for Button"));
+        loginBtn.setTooltip(new Tooltip("Tooltip for Register button"));
     }
 }

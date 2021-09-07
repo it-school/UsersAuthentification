@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.stage.Stage;
 import sample.Classes.User;
 
 public class RegisterController {
@@ -18,12 +19,10 @@ public class RegisterController {
     Button loginBtn;
 
     @FXML
-    Button registerBtn;
+    Button cancelBtn;
 
     public void cancelClick(ActionEvent actionEvent) {
-        Tooltip tt = new Tooltip("Tooltip for Cancel registration button");
-        tt.setStyle("-fx-font: normal bold 10 Langdon; -fx-base: #AE3522; -fx-text-fill: orange;");
-        registerBtn.setTooltip(tt);
+        ((Stage) cancelBtn.getScene().getWindow()).close();
     }
 
     public void registerClick(ActionEvent actionEvent) {
@@ -33,5 +32,9 @@ public class RegisterController {
         Main.users.add(new User(login, password));
 
         loginBtn.setTooltip(new Tooltip("Tooltip for Register button"));
+
+        Tooltip tt = new Tooltip("Tooltip for Cancel registration button");
+        tt.setStyle("-fx-font: normal bold 10 Langdon; -fx-base: #AE3522; -fx-text-fill: orange;");
+        cancelBtn.setTooltip(tt);
     }
 }

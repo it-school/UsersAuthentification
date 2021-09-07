@@ -50,15 +50,12 @@ public class Passwords
 
 	public boolean isCorrectActivePassword(String password)
 	{
-		if (passwords.get(passwords.size() - 1).getPassword().equals(password))
-			return true;
-		else
-			return false;
+		return passwords.get(passwords.size() - 1).getPassword().equals(password);
 	}
 
 	public boolean canBeAdded(String password)
 	{
-
+		// TODO проверка валидности пароля и отсутствия старого пароля такого же
 		return true;
 	}
 }

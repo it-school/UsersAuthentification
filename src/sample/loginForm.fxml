@@ -5,13 +5,13 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.*?>
-<GridPane alignment="center" hgap="10" prefHeight="200.0" prefWidth="234.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
-          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="200.0" prefWidth="234.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.2"
+          fx:controller="sample.LoginController">
     <children>
         <VBox prefHeight="136.0" prefWidth="218.0">
             <children>
-                <TextField fx:id="login" promptText="user login"/>
-                <PasswordField fx:id="password" promptText="password">
+                <TextField fx:id="login" onKeyPressed="#textViewPressed" promptText="user login"/>
+                <PasswordField fx:id="password" onKeyPressed="#textViewPressed" promptText="password">
                     <VBox.margin>
                         <Insets top="10.0"/>
                     </VBox.margin>
